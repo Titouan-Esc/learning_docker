@@ -1,0 +1,10 @@
+# ingore file in racine
+README.md
+# ignore file in folder
+*/file.txt
+# ingore file everywhere
+**/file.txt
+# ingore in racine which begins with
+fi*.txt
+# ingore in racine if match one char
+fi?.txt
