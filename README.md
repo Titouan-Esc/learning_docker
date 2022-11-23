@@ -31,4 +31,7 @@ docker run --mount type=bind,source=<url>,target=<url> uneimage
 ```
 astuce commande bash = "$(pwd)" affiche le résultat de la commande "pwd" très pratique
 
-Tout le dossier de la machine est partagé en direct avec le dossier data dans le container docker en temps réel
+Tout le dossier de la machine est partagé en direct avec le dossier data dans le container docker en temps réel.
+
+#### Environnement Dev avec Bind Mount
+Créer un sous dossier avec à l'intérieur les fichiers souhaité. Bind ce dossier là pour éviter d'écraser le dossier racine créé depuis le Dockerfile. En l'occurence node_modules ne sera plus dans le dossier app, car écrasé à cause du **Bind Mount**.

@@ -13,4 +13,4 @@ COPY . .
 # Update env path for all bin in node_modules
 ENV PATH=$PATH:/app/node_modules/.bin
 # Run command in terminal
-CMD ["nodemon", "app.js"]
+CMD ["nodemon", "src/app.js"]
