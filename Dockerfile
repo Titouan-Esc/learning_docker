@@ -1,5 +1,10 @@
 # Image node alpine
 FROM node:alpine
+
+# Install vim for update file in docker container
+RUN ["apk", "update"]
+RUN ["apk", "add", "vim"]
+
 # Place in folder app
 WORKDIR /app
 # Twice so you don't have to order every time "npm install"

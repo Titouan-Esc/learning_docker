@@ -8,3 +8,5 @@ README.md
 fi*.txt
 # ingore in racine if match one char
 fi?.txt
+
+data
