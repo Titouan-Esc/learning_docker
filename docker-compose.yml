@@ -1,12 +1,18 @@
 version: "3.9"
 services:
   db:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
     image: mongo
     volumes:
       - type: volume
         source: mydb
         target: /data/db
   server:
+    environment:
+      - MONGO_PWD
+      - MONGO_USR
     build: .
     ports:
       - 80:80
@@ -14,6 +20,9 @@ services:
       - type: bind
         source: ./src
         target: /app/src
+    depends_on:
+      - db
+    restart: "no"
 
 volumes:
   mydb:
